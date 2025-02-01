@@ -1,11 +1,29 @@
 /* General Styles */
+:root {
+  --primary-color: #3498db;
+  --background-color: #1e1e2f;
+  --text-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] {
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --card-bg: #ffffff;
+  --card-border: rgba(0, 0, 0, 0.1);
+  --shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  color: #333;
-  background: #f4f4f4;
+  color: var(--text-color);
+  background: var(--background-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -15,12 +33,12 @@ body {
 }
 
 h1, h2, h3 {
-  color: #2c3e50;
+  color: var(--primary-color);
 }
 
 a {
   text-decoration: none;
-  color: #3498db;
+  color: var(--primary-color);
 }
 
 a:hover {
@@ -30,7 +48,7 @@ a:hover {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #3498db;
+  background: var(--primary-color);
   color: #fff;
   border-radius: 5px;
   transition: background 0.3s ease, transform 0.3s ease;
@@ -41,12 +59,27 @@ a:hover {
   transform: translateY(-2px);
 }
 
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.theme-toggle i {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
 /* Header */
 header {
-  background: #2c3e50;
-  color: #fff;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
   padding: 20px 0;
   text-align: center;
+  border-bottom: 1px solid var(--card-border);
 }
 
 header h1 {
@@ -71,13 +104,13 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: var(--text-color);
   font-weight: bold;
 }
 
 /* Hero Section */
 #hero {
-  background: #3498db;
+  background: linear-gradient(135deg, var(--primary-color), #6dd5fa);
   color: #fff;
   padding: 100px 0;
   text-align: center;
@@ -104,7 +137,6 @@ header nav ul li a {
 /* About Section */
 #about {
   padding: 50px 0;
-  background: #fff;
 }
 
 #about .skills-grid {
@@ -115,15 +147,17 @@ header nav ul li a {
 }
 
 #about .skill {
-  background: #ecf0f1;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
 }
 
 #about .skill h3 {
   margin: 0 0 10px;
-  color: #3498db;
+  color: var(--primary-color);
 }
 
 #about .certifications {
@@ -132,16 +166,17 @@ header nav ul li a {
 }
 
 #about .certifications li {
-  background: #ecf0f1;
+  background: var(--card-bg);
   margin: 10px 0;
   padding: 10px;
   border-radius: 5px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
 }
 
 /* Projects Section */
 #projects {
   padding: 50px 0;
-  background: #f4f4f4;
 }
 
 #projects .projects-grid {
@@ -151,11 +186,13 @@ header nav ul li a {
 }
 
 #projects .project {
-  background: #fff;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
   transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
 }
 
 #projects .project:hover {
@@ -169,13 +206,12 @@ header nav ul li a {
 
 #projects .project h3 {
   margin: 15px 0 10px;
-  color: #3498db;
+  color: var(--primary-color);
 }
 
 /* Blogs Section */
 #blogs {
   padding: 50px 0;
-  background: #fff;
 }
 
 #blogs .blogs-grid {
@@ -185,10 +221,12 @@ header nav ul li a {
 }
 
 #blogs .blog {
-  background: #ecf0f1;
+  background: var(--card-bg);
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
 }
 
 #blogs .blog:hover {
@@ -197,13 +235,12 @@ header nav ul li a {
 
 #blogs .blog h3 {
   margin: 0 0 10px;
-  color: #3498db;
+  color: var(--primary-color);
 }
 
 /* Contact Section */
 #contact {
   padding: 50px 0;
-  background: #f4f4f4;
 }
 
 #contact form {
@@ -216,8 +253,10 @@ header nav ul li a {
 #contact form input, #contact form textarea {
   margin: 10px 0;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--card-border);
   border-radius: 5px;
+  background: var(--card-bg);
+  color: var(--text-color);
 }
 
 #contact .social-links {
@@ -228,13 +267,14 @@ header nav ul li a {
 #contact .social-links a {
   margin: 0 10px;
   font-size: 24px;
-  color: #3498db;
+  color: var(--primary-color);
 }
 
 /* Footer */
 footer {
-  background: #2c3e50;
-  color: #fff;
+  background: var(--card-bg);
+  color: var(--text-color);
   text-align: center;
   padding: 20px 0;
+  border-top: 1px solid var(--card-border);
 }
