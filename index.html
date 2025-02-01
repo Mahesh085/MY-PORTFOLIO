@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uma Mahesh - DevOps Engineer</title>
+  <title>John Doe - DevOps Engineer</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -11,15 +11,16 @@
   <!-- Header -->
   <header>
     <div class="container">
-      <h1>Uma Mahesh</h1>
+      <h1>John Doe</h1>
       <p>DevOps Engineer</p>
       <p class="tagline">Automating Infrastructure, Delivering Scalable Solutions</p>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#blogs">Blogs</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="assets/resume.pdf" download>Resume</a></li>
+          <li><a href="assets/resume.pdf" download class="btn">Resume</a></li>
         </ul>
       </nav>
     </div>
@@ -28,8 +29,8 @@
   <!-- Hero Section -->
   <section id="hero">
     <div class="container">
-      <img src="assets/images/profile.jpg" alt="Uma Mahesh" class="profile-img">
-      <h2>Hi, I'm Uma Mahesh</h2>
+      <img src="assets/images/profile.jpg" alt="John Doe" class="profile-img">
+      <h2>Hi, I'm John</h2>
       <p>A DevOps Engineer passionate about building scalable and reliable systems.</p>
       <a href="#projects" class="btn">View My Work</a>
     </div>
@@ -40,17 +41,34 @@
     <div class="container">
       <h2>About Me</h2>
       <p>
-        I'm a passionate DevOps Engineer with 2+ years of experience in automating infrastructure, optimizing CI/CD pipelines, and ensuring scalable and reliable systems. I specialize in cloud technologies, containerization, and infrastructure as code (IaC).
+        I'm a passionate DevOps Engineer with 5+ years of experience in automating infrastructure, optimizing CI/CD pipelines, and ensuring scalable and reliable systems. I specialize in cloud technologies, containerization, and infrastructure as code (IaC).
       </p>
-      <h3>Skills</h3>
-      <ul class="skills">
-        <li>CI/CD: Jenkins, GitLab CI, GitHub Actions</li>
-        <li>Cloud: AWS, Azure, GCP</li>
-        <li>Containerization: Docker, Kubernetes</li>
-        <li>IaC: Terraform, CloudFormation</li>
-        <li>Scripting: Python, Bash</li>
-        <li>Monitoring: Prometheus, Grafana, ELK Stack</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill">
+          <h3>CI/CD</h3>
+          <p>Jenkins, GitLab CI, GitHub Actions</p>
+        </div>
+        <div class="skill">
+          <h3>Cloud</h3>
+          <p>AWS, Azure, GCP</p>
+        </div>
+        <div class="skill">
+          <h3>Containerization</h3>
+          <p>Docker, Kubernetes</p>
+        </div>
+        <div class="skill">
+          <h3>IaC</h3>
+          <p>Terraform, CloudFormation</p>
+        </div>
+        <div class="skill">
+          <h3>Scripting</h3>
+          <p>Python, Bash</p>
+        </div>
+        <div class="skill">
+          <h3>Monitoring</h3>
+          <p>Prometheus, Grafana, ELK Stack</p>
+        </div>
+      </div>
       <h3>Certifications</h3>
       <ul class="certifications">
         <li>AWS Certified DevOps Engineer – Professional</li>
@@ -63,26 +81,52 @@
   <section id="projects">
     <div class="container">
       <h2>Projects</h2>
-      <div class="project">
-        <img src="assets/images/project1.png" alt="Project 1">
-        <h3>CI/CD Pipeline Automation for Microservices</h3>
-        <p>Designed and implemented a Jenkins-based CI/CD pipeline for a microservices architecture.</p>
-        <p><strong>Outcome:</strong> Reduced deployment time by 40%.</p>
-        <a href="#" class="btn">View on GitHub</a>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="assets/images/project1.png" alt="Project 1">
+          <h3>CI/CD Pipeline Automation for Microservices</h3>
+          <p>Designed and implemented a Jenkins-based CI/CD pipeline for a microservices architecture.</p>
+          <p><strong>Outcome:</strong> Reduced deployment time by 40%.</p>
+          <a href="#" class="btn">View on GitHub</a>
+        </div>
+        <div class="project">
+          <img src="assets/images/project2.png" alt="Project 2">
+          <h3>Infrastructure as Code with Terraform</h3>
+          <p>Automated AWS infrastructure provisioning using Terraform.</p>
+          <p><strong>Outcome:</strong> Enabled rapid scaling and reduced manual errors.</p>
+          <a href="#" class="btn">View on GitHub</a>
+        </div>
+        <div class="project">
+          <img src="assets/images/project3.png" alt="Project 3">
+          <h3>Centralized Logging with ELK Stack</h3>
+          <p>Implemented an ELK stack for centralized logging and monitoring.</p>
+          <p><strong>Outcome:</strong> Improved system uptime by 25%.</p>
+          <a href="#" class="btn">View on GitHub</a>
+        </div>
       </div>
-      <div class="project">
-        <img src="assets/images/project2.png" alt="Project 2">
-        <h3>Infrastructure as Code with Terraform</h3>
-        <p>Automated AWS infrastructure provisioning using Terraform.</p>
-        <p><strong>Outcome:</strong> Enabled rapid scaling and reduced manual errors.</p>
-        <a href="#" class="btn">View on GitHub</a>
-      </div>
-      <div class="project">
-        <img src="assets/images/project3.png" alt="Project 3">
-        <h3>Centralized Logging with ELK Stack</h3>
-        <p>Implemented an ELK stack for centralized logging and monitoring.</p>
-        <p><strong>Outcome:</strong> Improved system uptime by 25%.</p>
-        <a href="#" class="btn">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- Blogs Section -->
+  <section id="blogs">
+    <div class="container">
+      <h2>Blogs</h2>
+      <div class="blogs-grid">
+        <div class="blog">
+          <h3>5 Best Practices for CI/CD Pipelines</h3>
+          <p>Learn how to optimize your CI/CD pipelines for faster and reliable deployments.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="blog">
+          <h3>Getting Started with Kubernetes</h3>
+          <p>A beginner's guide to understanding and deploying applications on Kubernetes.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="blog">
+          <h3>Infrastructure as Code with Terraform</h3>
+          <p>How to automate cloud infrastructure using Terraform.</p>
+          <a href="#" class="btn">Read More</a>
+        </div>
       </div>
     </div>
   </section>
